@@ -1,0 +1,8 @@
+day_of_week,morning_shift,day_shift,night_shift,w_id
+Sunday,0,0,0,1
+Monday,0,0,0,1
+Tuesday,0,0,0,1
+Wednesday,0,0,0,1
+Thursday,0,0,0,1
+Friday,0,0,0,1
+Sabbath,0,0,0,1
