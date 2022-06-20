@@ -139,11 +139,16 @@ def check_for_late_resp(res):
 #Starting to process
 
 st.header('Shifts 24.7 web app')
-
-workers = pd.read_csv(r'~/time_table/workers.csv')
-pref = pd.read_csv(r'~/time_table/preferences.csv')
-nexts = pd.read_csv(r'~/time_table/nexts.csv')
-#res = pd.read_csv(r'~/time_table/responses.csv')
+try:
+    workers = pd.read_csv(r'~/shaytimetable/workers.csv')
+    pref = pd.read_csv(r'~/shaytimetable/preferences.csv')
+    nexts = pd.read_csv(r'~/shaytimetable/nexts.csv')
+    #res = pd.read_csv(r'~/time_table/responses.csv')
+except:
+    st.write('runnig exception')
+    workers = pd.read_csv(r'~/workers.csv')
+    pref = pd.read_csv(r'~/preferences.csv')
+    nexts = pd.read_csv(r'~/nexts.csv')
 
 workers.fillna('Worker', inplace= True)
 
